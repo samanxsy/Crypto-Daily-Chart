@@ -1,5 +1,5 @@
 # Crypto-Daily-Chart
-- A program that fetches the market data of a specified cryptocurrency and plots the candlestick chart using the CoinGecko API.
+A program that fetches the market data of a specified cryptocurrency and plots the candlestick chart using the CoinGecko API.
 
 
 ## Getting Started
