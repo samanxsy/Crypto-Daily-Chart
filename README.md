@@ -43,7 +43,7 @@ Make sure you enter the "Ecosystem" name. e.g "Cardano" not "Ada", and "Polkadot
 - plotly - Data Visualization
 
 #### Author 
-- Samanxsy
+- Saman Saybani (Samanxsy)
 
 #### Acknowledgments
 - CoinGecko API
