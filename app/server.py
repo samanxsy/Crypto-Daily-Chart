@@ -1,7 +1,7 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 import cryptoChart
 
-app = Flask("Crypto Daily Charts")
+app = Flask("Crypto Daily Charts", static_folder="./app/static")
 
 @app.route('/')
 def home():
@@ -23,8 +23,22 @@ def chart():
   
   coin = request.args.get("market")
   days = request.args.get("days")
-  calculate = cryptoChart.crypto_chart(coin, days)
-  calculate = calculate
+  
+  try:
+    calculate = cryptoChart.crypto_chart(coin, days)
+    calculate = calculate
+  except ValueError:
+    return redirect('/error')
+  
+  return page
+
+@app.route('/error')
+def error():
+  
+  page = ""
+  f = open("app/templates/errors.html", "r")
+  page = f.read()
+  f.close()
   
   return page
   
