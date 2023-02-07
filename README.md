@@ -30,11 +30,12 @@ These instructions will get you a copy of the project up and running on your loc
 #### Usage
 The application has a simple interface requiring the "Ecosystem" name, and the number of "Previous Candles" you want to see. Once you enter the valid inputs, the program will display the candlestick chart in a new window.
 
-![Ethereum](https://user-images.githubusercontent.com/118216325/213879043-04a73739-e6d8-4d5c-84f2-6a69f8629a22.png)
-![chart](https://user-images.githubusercontent.com/118216325/213879052-f5ac1ca8-5f20-4547-8bdc-160525a1fb05.png)
-
 Make sure you enter the "Ecosystem" name. e.g "Cardano" not "Ada", and "Polkadot" not "Dot"
 
+### App view
+
+![Ethereum](https://user-images.githubusercontent.com/118216325/213879043-04a73739-e6d8-4d5c-84f2-6a69f8629a22.png)
+![chart](https://user-images.githubusercontent.com/118216325/213879052-f5ac1ca8-5f20-4547-8bdc-160525a1fb05.png)
 
 #### Built With 
 - Python - Programming Language
