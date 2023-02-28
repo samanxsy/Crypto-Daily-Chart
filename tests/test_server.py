@@ -14,8 +14,33 @@ class BaseTest(unittest.TestCase):
 
 
 class TestServer(BaseTest):
-
+    """This should return 200 OK upon success"""
     def test_home(self):
         with self.app.test_client() as c:
             response = c.get('/')
             self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+    def test_error_handle(self):
+        """This should redirect to the error page after a ValueError"""
+        with self.app.test_client() as c:
+            response = c.get('/calculate?market=wooodcoin&days=14')
+            self.assertIn(b"Redirecting", response.data)
+
+
+    def test_correct_value(self):
+        """This should return 200 OK upon success"""
+        with self.app.test_client() as c:
+            response = c.get('/calculate?market=bitcoin&days=14')
+            self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+    def test_error(self):
+        """This should return 200 OK upon success"""
+        with self.app.test_client() as c:
+            response = c.get('/error')
+            self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+if __name__ == '__main__':
+    unittest.main()
