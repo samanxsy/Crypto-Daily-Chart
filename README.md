@@ -11,21 +11,33 @@ These instructions will get you a copy of the project up and running on your loc
 - CoinGecko API key
 - pandas
 - plotly
+- numpy
 
 
 #### Installing 
 
 1. clone the repository to your local machine:
-  - git clone https://github.com/samanxsy/Crypto-Daily-Chart.git
+```
+git clone https://github.com/samanxsy/Crypto-Daily-Chart.git
+```
 
 2. install the requirements
-
+```
+pip install -r requirements.txt
+```
 
 3. There is no API Key required to run this program. All you need to do is: 
   - from pycoingecko import CoinGeckoAPI
 
-4. Run the program
+4. Run the tests with pytest
+```
+pytest
+```
 
+5. Run the program on your localhost
+```
+gunicorn app.server:app
+```
 
 #### Usage
 The application has a simple interface requiring the "Ecosystem" name, and the number of "Previous Candles" you want to see. Once you enter the valid inputs, the program will display the candlestick chart in a new window.
