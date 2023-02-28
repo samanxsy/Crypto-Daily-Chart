@@ -40,7 +40,7 @@ jobs:
           conda update -q conda
           conda info -a
 
-          conda create -n numpy_env python=3.8 numpy
+          conda create -n numpy_env python=3.8 numpy pandas
           conda activate numpy_env
 
       - name: Run unit tests with pytest
